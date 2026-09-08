@@ -1,4 +1,4 @@
-baseURL = 'https://yanleijava.github.io/blog/'
+baseURL = 'https://yanleijava.github.io/'
 title = 'Yanlei'
 theme = 'mifanr'
 locale = 'zh-CN'
