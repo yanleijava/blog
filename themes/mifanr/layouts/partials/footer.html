@@ -1,0 +1,16 @@
+<footer class="foot">
+  <p>
+    {{ if .IsHome }}
+      <a href="{{ `about/` | relURL }}">关于</a>
+    {{ else }}
+      <a href="{{ site.Home.RelPermalink }}">← 回到首页</a>
+    {{ end }}
+    · <a href="{{ `rss.xml` | relURL }}">RSS</a>
+    {{ with site.Params.twitter }}
+      · <a href="https://x.com/{{ . }}" rel="me noopener">@{{ . }}</a>
+    {{ end }}
+    {{ if and (eq .Section "posts") site.Params.license site.Params.licenseURL }}
+      · 本文以 <a href="{{ site.Params.licenseURL }}" rel="license noopener">{{ site.Params.license }}</a> 发布，转载请署名并链接原文。
+    {{ end }}
+  </p>
+</footer>

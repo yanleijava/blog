@@ -1,0 +1,9 @@
+{{ define "main" }}
+  <article>
+    <h1>{{ .Title }}</h1>
+    {{ if eq .Section "posts" }}
+      <p class="meta">{{ .Date.Format (or site.Params.dateFormat "2006 年 1 月 2 日") }}</p>
+    {{ end }}
+    {{ .Content }}
+  </article>
+{{ end }}

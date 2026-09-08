@@ -1,0 +1,39 @@
+baseURL = 'https://yanleijava.github.io/blog/'
+title = 'Yanlei'
+theme = 'mifanr'
+locale = 'zh-CN'
+defaultContentLanguage = 'zh-hans'
+hasCJKLanguage = true
+enableRobotsTXT = true
+summaryLength = 90
+disableKinds = ['taxonomy', 'term']
+
+[pagination]
+  pagerSize = 50
+
+[outputs]
+  home = ['HTML', 'RSS']
+
+[outputFormats.RSS]
+  mediaType = 'application/rss+xml'
+  baseName = 'rss'
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  style = 'github'
+  noClasses = true
+  tabWidth = 2
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
+[params]
+  description = '在这里写一句话介绍自己。'
+  github = 'yanleijava'
+  # twitter = 'yourhandle'
+  dateFormat = '2006 年 1 月 2 日'
+  license = 'CC BY 4.0'
+  licenseURL = 'https://creativecommons.org/licenses/by/4.0/deed.zh'
