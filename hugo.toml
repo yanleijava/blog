@@ -1,5 +1,5 @@
 baseURL = 'https://yanleijava.github.io/'
-title = 'Yanlei'
+title = '超神投资'
 theme = 'mifanr'
 locale = 'zh-CN'
 defaultContentLanguage = 'zh-hans'
@@ -31,9 +31,9 @@ disableKinds = ['taxonomy', 'term']
     dir = ':cacheDir/images'
 
 [params]
-  description = '在这里写一句话介绍自己。'
+  description = '计划你的交易，交易你的计划。'
   github = 'yanleijava'
-  # twitter = 'yourhandle'
+  twitter = 'chaoshentouzi'
   dateFormat = '2006 年 1 月 2 日'
   license = 'CC BY 4.0'
   licenseURL = 'https://creativecommons.org/licenses/by/4.0/deed.zh'
