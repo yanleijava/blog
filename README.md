@@ -26,6 +26,16 @@ git push
 
 | 文件 | 用途 |
 | --- | --- |
-| `hugo.toml` | 站点名、介绍、X 账号 |
+| `hugo.toml` | 站点名、介绍、产品列表、联系方式 |
 | `content/about.md` | 关于页 |
 | `content/posts/*.md` | 文章 |
+
+新增产品时，在 `hugo.toml` 里追加一段：
+
+```toml
+[[params.products]]
+  name = '产品名'
+  url = 'https://example.com/'
+  summary = '一句话介绍。'
+  note = '在线'
+```

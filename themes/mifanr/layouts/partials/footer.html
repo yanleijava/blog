@@ -1,4 +1,14 @@
 <footer class="foot">
+  {{ with site.Params.contacts }}
+    <div class="contact-row">
+      <span class="contact-label">联系方式</span>
+      <nav class="contact-links" aria-label="联系方式">
+        {{ range . }}
+          <a href="{{ .url }}" target="_blank" rel="me noopener noreferrer">{{ .label }}</a>
+        {{ end }}
+      </nav>
+    </div>
+  {{ end }}
   <p>
     {{ if .IsHome }}
       <a href="{{ `about/` | relURL }}">关于</a>
@@ -6,9 +16,6 @@
       <a href="{{ site.Home.RelPermalink }}">← 回到首页</a>
     {{ end }}
     · <a href="{{ `rss.xml` | relURL }}">RSS</a>
-    {{ with site.Params.twitter }}
-      · <a href="https://x.com/{{ . }}" rel="me noopener">@{{ . }}</a>
-    {{ end }}
     {{ if and (eq .Section "posts") site.Params.license site.Params.licenseURL }}
       · 本文以 <a href="{{ site.Params.licenseURL }}" rel="license noopener">{{ site.Params.license }}</a> 发布，转载请署名并链接原文。
     {{ end }}

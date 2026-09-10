@@ -5,24 +5,30 @@
       <p class="intro">{{ . }}</p>
     {{ end }}
   </header>
+
+  {{ partial "products.html" . }}
+
   {{ $posts := where site.RegularPages "Section" "posts" }}
-  {{ if $posts }}
-    <ul class="list">
-      {{ range $posts }}
-        <li>
-          <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format (or site.Params.dateFormat "2006 年 1 月 2 日") }}</time>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          {{ with .Params.summary }}
-            <p class="sum">{{ . }}</p>
-          {{ else }}
-            {{ with .Summary }}
-              <p class="sum">{{ . | plainify | truncate 120 }}</p>
+  <section class="section" aria-labelledby="posts-title">
+    <h2 id="posts-title">文章</h2>
+    {{ if $posts }}
+      <ul class="list">
+        {{ range $posts }}
+          <li>
+            <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format (or site.Params.dateFormat "2006 年 1 月 2 日") }}</time>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ with .Params.summary }}
+              <p class="sum">{{ . }}</p>
+            {{ else }}
+              {{ with .Summary }}
+                <p class="sum">{{ . | plainify | truncate 120 }}</p>
+              {{ end }}
             {{ end }}
-          {{ end }}
-        </li>
-      {{ end }}
-    </ul>
-  {{ else }}
-    <p class="empty">还没有文章。</p>
-  {{ end }}
+          </li>
+        {{ end }}
+      </ul>
+    {{ else }}
+      <p class="empty">还没有文章。</p>
+    {{ end }}
+  </section>
 {{ end }}

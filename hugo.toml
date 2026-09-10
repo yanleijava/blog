@@ -37,3 +37,17 @@ disableKinds = ['taxonomy', 'term']
   dateFormat = '2006 年 1 月 2 日'
   license = 'CC BY 4.0'
   licenseURL = 'https://creativecommons.org/licenses/by/4.0/deed.zh'
+
+[[params.products]]
+  name = 'ETH 10000'
+  url = 'https://eth10000.com/'
+  summary = '以太坊投资研究：公开策略信号、历史表现与数据。'
+  note = '在线'
+
+[[params.contacts]]
+  label = 'X / Twitter'
+  url = 'https://x.com/chaoshentouzi'
+
+[[params.contacts]]
+  label = 'GitHub'
+  url = 'https://github.com/yanleijava'
