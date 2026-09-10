@@ -185,6 +185,9 @@ td {
 .section > h2 {
   margin-top: 0;
   margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--mute);
 }
 
 .product-list {
@@ -215,11 +218,23 @@ td {
   height: 44px;
   flex: 0 0 44px;
   place-items: center;
+  overflow: hidden;
   border-radius: 10px;
   background: var(--code-bg);
   color: var(--ink);
   font-size: 15px;
   font-weight: 700;
+}
+
+.product-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-icon:has(img) {
+  background: transparent;
 }
 
 .product-copy {
@@ -258,10 +273,9 @@ td {
 
 .contact-row {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 8px 22px;
-  margin-bottom: 18px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .contact-label {
@@ -344,13 +358,39 @@ td {
   margin: 0 0 44px;
 }
 
+.license {
+  margin: 48px 0 0;
+  font-size: 14px;
+  color: var(--mute);
+}
+
+.wrap:has(article) .foot {
+  margin-top: 24px;
+}
+
 .foot {
   margin-top: 72px;
-  padding-top: 22px;
-  border-top: 1px solid var(--rule);
+  padding-top: 0;
+  border-top: 0;
   font-size: 14px;
   color: var(--mute);
   line-height: 1.8;
+}
+
+.foot::before {
+  content: "";
+  display: block;
+  height: 10px;
+  margin: 0 0 22px;
+  background: var(--rule);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 8' preserveAspectRatio='none'%3E%3Cpath fill='none' stroke='%23000' stroke-width='1.25' d='M0 4c3 0 3-2.6 6-2.6S9 4 12 4s3-2.6 6-2.6S21 4 24 4'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: repeat-x;
+  -webkit-mask-size: 24px 10px;
+  -webkit-mask-position: left center;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 8' preserveAspectRatio='none'%3E%3Cpath fill='none' stroke='%23000' stroke-width='1.25' d='M0 4c3 0 3-2.6 6-2.6S9 4 12 4s3-2.6 6-2.6S21 4 24 4'/%3E%3C/svg%3E");
+  mask-repeat: repeat-x;
+  mask-size: 24px 10px;
+  mask-position: left center;
 }
 
 .foot p {

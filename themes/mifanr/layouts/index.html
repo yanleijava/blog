@@ -6,11 +6,9 @@
     {{ end }}
   </header>
 
-  {{ partial "products.html" . }}
-
   {{ $posts := where site.RegularPages "Section" "posts" }}
   <section class="section" aria-labelledby="posts-title">
-    <h2 id="posts-title">文章</h2>
+    <h2 id="posts-title">最新文章</h2>
     {{ if $posts }}
       <ul class="list">
         {{ range $posts }}
@@ -31,4 +29,6 @@
       <p class="empty">还没有文章。</p>
     {{ end }}
   </section>
+
+  {{ partial "products.html" . }}
 {{ end }}

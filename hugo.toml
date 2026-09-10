@@ -43,6 +43,7 @@ disableKinds = ['taxonomy', 'term']
   url = 'https://eth10000.com/'
   summary = '以太坊投资研究：公开策略信号、历史表现与数据。'
   note = '在线'
+  logo = '/images/products/eth10000.svg'
 
 [[params.contacts]]
   label = 'X / Twitter'

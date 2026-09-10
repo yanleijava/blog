@@ -1,10 +1,16 @@
 {{ with site.Params.products }}
   <section class="section" aria-labelledby="products-title">
-    <h2 id="products-title">我的产品</h2>
+    <h2 id="products-title">我的作品</h2>
     <div class="product-list">
       {{ range . }}
         <a class="product-card" href="{{ .url }}" target="_blank" rel="noopener noreferrer">
-          <span class="product-icon" aria-hidden="true">{{ substr .name 0 1 }}</span>
+          <span class="product-icon" aria-hidden="true">
+            {{ with .logo }}
+              <img src="{{ . | relURL }}" alt="">
+            {{ else }}
+              {{ substr .name 0 1 }}
+            {{ end }}
+          </span>
           <span class="product-copy">
             <strong>{{ .name }}</strong>
             {{ with .summary }}<span>{{ . }}</span>{{ end }}

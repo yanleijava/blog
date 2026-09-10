@@ -5,5 +5,10 @@
       <p class="meta">{{ .Date.Format (or site.Params.dateFormat "2006 年 1 月 2 日") }}</p>
     {{ end }}
     {{ .Content }}
+    {{ if and (eq .Section "posts") site.Params.license site.Params.licenseURL }}
+      <p class="license">
+        本文以 <a href="{{ site.Params.licenseURL }}" rel="license noopener">{{ site.Params.license }}</a> 发布，转载请署名并链接原文。
+      </p>
+    {{ end }}
   </article>
 {{ end }}

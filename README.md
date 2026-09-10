@@ -38,4 +38,7 @@ git push
   url = 'https://example.com/'
   summary = '一句话介绍。'
   note = '在线'
+  logo = '/images/products/product.svg'
 ```
+
+产品 logo 放到 `static/images/products/`，然后在配置里用 `/images/products/...` 引用。
