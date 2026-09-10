@@ -35,6 +35,7 @@ disableKinds = ['taxonomy', 'term']
   github = 'yanleijava'
   twitter = 'chaoshentouzi'
   dateFormat = '2006 年 1 月 2 日'
+  avatar = '/images/avatar.jpg'
   license = 'CC BY 4.0'
   licenseURL = 'https://creativecommons.org/licenses/by/4.0/deed.zh'
 

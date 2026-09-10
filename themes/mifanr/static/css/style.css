@@ -302,8 +302,34 @@ td {
   margin-bottom: 8px;
 }
 
-.head h1 {
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   margin-bottom: 14px;
+}
+
+.brand-copy {
+  min-width: 0;
+}
+
+.brand h1 {
+  margin: 0 0 4px;
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  flex: 0 0 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s ease;
+}
+
+.avatar:hover,
+.avatar:focus-visible {
+  transform: rotate(360deg);
 }
 
 .intro {

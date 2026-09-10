@@ -1,9 +1,16 @@
 {{ define "main" }}
   <header class="head">
-    <h1>{{ site.Title }}</h1>
-    {{ with site.Params.description }}
-      <p class="intro">{{ . }}</p>
-    {{ end }}
+    <div class="brand">
+      {{ with site.Params.avatar }}
+        <img class="avatar" src="{{ . | relURL }}" alt="{{ site.Title }}" width="72" height="72">
+      {{ end }}
+      <div class="brand-copy">
+        <h1>{{ site.Title }}</h1>
+        {{ with site.Params.description }}
+          <p class="intro">{{ . }}</p>
+        {{ end }}
+      </div>
+    </div>
   </header>
 
   {{ $posts := where site.RegularPages "Section" "posts" }}
