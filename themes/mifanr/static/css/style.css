@@ -8,6 +8,7 @@
   --link: #1a5fb4;
   --code-bg: #f2f4f6;
   --c-never: #b8544a;
+  --progress: #ff6154;
   --measure: 700px;
   --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
     "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
@@ -425,6 +426,48 @@ td {
 
 .empty {
   color: var(--mute);
+}
+
+.top-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 3px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.top-progress.is-on {
+  opacity: 1;
+}
+
+.top-progress.is-done {
+  opacity: 0;
+  transition: opacity 0.4s ease 0.15s;
+}
+
+.top-progress-bar {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: var(--progress);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.28s ease-out;
+}
+
+.top-progress-bar::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 12px var(--progress), 0 0 6px var(--progress);
+  opacity: 0.9;
+  transform: rotate(3deg) translateY(-2px);
 }
 
 @media (prefers-reduced-motion: reduce) {
