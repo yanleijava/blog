@@ -154,6 +154,65 @@ table {
   font-size: 15px;
 }
 
+article {
+  font-family: "mp-quote", "PingFang SC", system-ui, -apple-system,
+    BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei UI",
+    "Microsoft YaHei", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  letter-spacing: 0.034em;
+  color: #3e3e3e;
+}
+
+article h1 {
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin: 0 0 12px;
+}
+
+article h2 {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 600;
+  margin: 32px 0 12px;
+}
+
+article h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 24px 0 10px;
+}
+
+article p {
+  margin: 0 0 16px;
+}
+
+article ul,
+article ol {
+  margin: 0 0 16px;
+}
+
+article li {
+  margin: 0 0 6px;
+}
+
+article blockquote {
+  margin: 0 0 16px;
+}
+
+article .meta {
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) article {
+    color: var(--ink);
+  }
+}
+
 th,
 td {
   border-bottom: 1px solid var(--rule);
