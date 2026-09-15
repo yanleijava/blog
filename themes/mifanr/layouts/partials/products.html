@@ -3,7 +3,12 @@
     <h2 id="products-title">我的作品</h2>
     <div class="product-list">
       {{ range . }}
-        <a class="product-card" href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+        {{ $external := hasPrefix .url "http" }}
+        <a
+          class="product-card"
+          href="{{ if $external }}{{ .url }}{{ else }}{{ .url | relURL }}{{ end }}"
+          {{ if $external }}target="_blank" rel="noopener noreferrer"{{ end }}
+        >
           <span class="product-icon" aria-hidden="true">
             {{ with .logo }}
               <img src="{{ . | relURL }}" alt="">

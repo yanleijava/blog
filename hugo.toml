@@ -46,6 +46,13 @@ disableKinds = ['taxonomy', 'term']
   note = '在线'
   logo = '/images/products/eth10000.svg'
 
+[[params.products]]
+  name = 'Anthropic 威胁报告解读'
+  url = '/anthropic-threat-report/'
+  summary = '2026年9月报告阅读工作台：七大危害领域、关键案例与防御启示。'
+  note = '阅读'
+  logo = '/images/products/anthropic-report.svg'
+
 [[params.contacts]]
   label = 'X / Twitter'
   url = 'https://x.com/chaoshentouzi'
