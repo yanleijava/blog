@@ -3,15 +3,15 @@
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body>
+  <body class="site">
     <div class="top-progress" aria-hidden="true">
       <div class="top-progress-bar"></div>
     </div>
-    <div class="wrap">
-      {{ partial "nav.html" . }}
+    {{ partial "nav.html" . }}
+    <main class="site-main">
       {{ block "main" . }}{{ end }}
       {{ partial "footer.html" . }}
-    </div>
+    </main>
     <script src="{{ `js/progress.js` | relURL }}"></script>
   </body>
 </html>

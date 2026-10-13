@@ -1,12 +1,3 @@
-<footer class="foot">
-  {{ with site.Params.contacts }}
-    <div class="contact-row">
-      <span class="contact-label">联系方式</span>
-      <nav class="contact-links" aria-label="联系方式">
-        {{ range . }}
-          <a href="{{ .url }}" target="_blank" rel="me noopener noreferrer">{{ .label }}</a>
-        {{ end }}
-      </nav>
-    </div>
-  {{ end }}
+<footer class="site-footer">
+  <p>{{ site.Params.description }}</p>
 </footer>

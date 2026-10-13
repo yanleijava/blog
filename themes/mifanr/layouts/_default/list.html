@@ -1,15 +1,12 @@
 {{ define "main" }}
-  <header class="head">
-    <h1>{{ .Title }}</h1>
-  </header>
-  <ul class="list">
+  <header class="site-page-title">{{ .Title }}</header>
+  <ul class="posts">
     {{ range .Pages }}
       <li>
-        <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format (or site.Params.dateFormat "2006 年 1 月 2 日") }}</time>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        {{ with .Params.summary }}
-          <p class="sum">{{ . }}</p>
-        {{ end }}
+        <a class="post-link" href="{{ .RelPermalink }}">
+          <span class="post-title">{{ .Title }}</span>
+          <time class="post-date" datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format "2006-01-02" }}</time>
+        </a>
       </li>
     {{ end }}
   </ul>

@@ -21,6 +21,11 @@ disableKinds = ['taxonomy', 'term']
 [markup.goldmark.renderer]
   unsafe = true
 
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 3
+  ordered = false
+
 [markup.highlight]
   style = 'github'
   noClasses = true
@@ -52,6 +57,13 @@ disableKinds = ['taxonomy', 'term']
   summary = '2026年9月报告阅读工作台：七大危害领域、关键案例与防御启示。'
   note = '阅读'
   logo = '/images/products/anthropic-report.svg'
+
+[[params.products]]
+  name = 'MBTI 16 型人格测试'
+  url = '/mbti/'
+  summary = '了解四维偏好、完成 48 题测试，并查看 16 型完整报告。'
+  note = '测试'
+  logo = '/images/products/mbti.svg'
 
 [[params.contacts]]
   label = 'X / Twitter'
