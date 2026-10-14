@@ -65,6 +65,13 @@ disableKinds = ['taxonomy', 'term']
   note = '测试'
   logo = '/images/products/mbti.svg'
 
+[[params.products]]
+  name = '@wufantouzi 画像'
+  url = '/wufan/'
+  summary = '根据公开推文整理的交易者画像：作息、主题迁移与说话方式。'
+  note = '画像'
+  logo = '/images/products/wufan.svg'
+
 [[params.contacts]]
   label = 'X / Twitter'
   url = 'https://x.com/chaoshentouzi'
