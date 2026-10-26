@@ -76,6 +76,13 @@ disableKinds = ['taxonomy']
   logo = '/images/products/mbti.svg'
 
 [[params.products]]
+  name = '小朋友图画偏好'
+  url = '/mbti-kids/'
+  summary = '给 6 岁及以下：家长读题，孩子在每题四张图里点一张。'
+  note = '图画'
+  logo = '/images/products/mbti-kids.svg'
+
+[[params.products]]
   name = '@wufantouzi 画像'
   url = '/wufan/'
   summary = '根据公开推文整理的交易者画像：作息、主题迁移与说话方式。'
