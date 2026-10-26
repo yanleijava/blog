@@ -44,7 +44,7 @@ jobs:
 
       - name: Build
         run: |
-          hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+          hugo --gc --minify --baseURL "https://blog.chaoshen.io/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5

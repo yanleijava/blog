@@ -2,7 +2,7 @@
 
 用 Hugo 生成、GitHub Pages 托管。写文章、`git push`，站点会自动更新。
 
-线上地址：https://yanleijava.github.io/
+线上地址：https://blog.chaoshen.io/
 
 ## 日常怎么用
 
